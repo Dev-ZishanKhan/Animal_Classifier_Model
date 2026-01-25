@@ -1,5 +1,6 @@
 "use client";
-import { useState, ChangeEvent } from "react";
+
+import { useState, ChangeEvent, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // --- Types ---
@@ -22,8 +23,23 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Theme State (Default: Dark Mode)
+  // Theme State (Default: System Theme)
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+
+  // Check system theme preference on mount
+  useEffect(() => {
+    setIsMounted(true);
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDarkMode(mediaQuery.matches);
+    
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsDarkMode(e.matches);
+    };
+    
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -68,6 +84,15 @@ export default function Home() {
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!isMounted) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+      </div>
+    );
+  }
 
   return (
     <div 
