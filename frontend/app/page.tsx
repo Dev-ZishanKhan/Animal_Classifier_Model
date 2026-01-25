@@ -41,7 +41,7 @@ export default function Home() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("https://iazishan-animal-api.hf.space/predict", {
+      const response = await fetch("https://iazishan-animal-detector-backend.hf.space", {
         method: "POST",
         body: formData,
       });
