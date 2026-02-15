@@ -234,8 +234,8 @@ git push origin feature/your-feature-name
 *AI Engineer & Founder — Zintel AI*
 
 [![GitHub](https://img.shields.io/badge/GitHub-Dev--ZishanKhan-181717?style=for-the-badge&logo=github)](https://github.com/Dev-ZishanKhan)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/your-profile)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF5722?style=for-the-badge&logo=google-chrome)](https://your-portfolio-link.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/zishan-coderx-048483370/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF5722?style=for-the-badge&logo=google-chrome)](https://marwatportfolio-eight.vercel.app/)
 
 </div>
 
