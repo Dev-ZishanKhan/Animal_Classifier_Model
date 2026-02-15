@@ -312,10 +312,10 @@ export default function Home() {
         {/* --- FOOTER --- */}
         <div className="mt-12 text-center opacity-70 hover:opacity-100 transition-opacity">
             <p className={`text-sm ${isDarkMode ? "text-slate-400" : "text-slate-600"}`}>
-                Designed & Developed by <span className="text-cyan-400 font-bold">Zishan</span>
+                Designed & Developed by <span className="text-cyan-400 font-bold">AI Engineer</span>
             </p>
             <p className={`text-xs mt-1 ${isDarkMode ? "text-slate-500" : "text-slate-500"}`}>
-                Built with <span className="text-red-500">♡</span> by Marwat
+                Built with <span className="text-red-500">♡</span> by Zeeshan Marwat
             </p>
         </div>
 
